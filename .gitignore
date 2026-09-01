@@ -1,0 +1,47 @@
+# Build output
+/bin/
+/dist/
+/build/
+*.test
+*.out
+coverage.*
+
+# Local Arc state
+/.arc/
+/artifacts/
+/tmp/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+credentials*
+secrets*
+
+# Tool and editor state
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Local harness caches
+.opencode/
+.codex/
+.claude/
+.cache/

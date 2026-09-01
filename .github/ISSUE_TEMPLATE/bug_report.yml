@@ -1,0 +1,101 @@
+name: Bug report
+description: Report reproducible incorrect behavior in the public project
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve Attexa Arc Harness.
+
+        Do not include credentials, private data, internal endpoints, or an unremediated security vulnerability. Use the security policy for suspected boundary failures.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight
+      options:
+        - label: I searched existing issues and did not find a matching report.
+          required: true
+        - label: This is not a security vulnerability requiring private disclosure.
+          required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Tag, commit SHA, branch, or container digest.
+      placeholder: v0.1.0-alpha or abc1234
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - Kernel state or storage
+        - Situation or context compiler
+        - Commission, Work, or Attempt lifecycle
+        - RuntimeDriver
+        - HarnessAdapter or HumanTaskAdapter
+        - Tool Gateway or MCP frontend
+        - Inference Gateway
+        - Outcome, Candidate, or Commit
+        - Evidence or verification
+        - CLI or API
+        - Documentation or examples
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, architecture, runtime, harness, model provider, storage, and relevant configuration with secrets removed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Provide the smallest reliable sequence that demonstrates the problem.
+      placeholder: |
+        1. Start ...
+        2. Commission ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Observed behavior
+      description: Distinguish worker-reported claims from platform-observed results.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Sanitized logs, event ranges, tests, artifact digests, or a small repository that helps reproduce the result.
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact and workaround
+      description: Explain who or what is affected and any safe workaround.
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context

@@ -1,0 +1,79 @@
+name: Feature request
+description: Propose a bounded improvement that preserves or intentionally evolves the architecture
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem before the mechanism. Material changes to durable semantics or public contracts may be moved into an RFC.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight
+      options:
+        - label: I searched existing issues and RFCs for a related proposal.
+          required: true
+        - label: I have described a problem rather than only naming a technology.
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What prevents a human, agent, adapter, or operator from doing accurate and efficient work today?
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: State the observable result and how it would be evaluated.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ownership
+    attributes:
+      label: Likely architecture owner
+      options:
+        - Surface or agent-facing API
+        - Arc Harness Kernel
+        - Capability plane
+        - RuntimeDriver
+        - HarnessAdapter or HumanTaskAdapter
+        - Provider or deployment substrate
+        - Unsure
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed approach
+      description: Describe the smallest coherent mechanism you currently imagine.
+
+  - type: textarea
+    id: invariants
+    attributes:
+      label: Invariants and boundaries
+      description: Explain effects on durability, authority, truth, Commit, context, isolation, evidence, or silent fallback.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Include the option of keeping current behavior.
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or examples
+      description: Real workflows, prototypes, benchmarks, or failure cases that support the request.
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Non-goals
+      description: What should this proposal explicitly not try to solve?

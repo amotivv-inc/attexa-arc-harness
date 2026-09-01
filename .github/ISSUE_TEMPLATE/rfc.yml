@@ -1,0 +1,81 @@
+name: RFC proposal
+description: Begin discussion of a material architecture, contract, compatibility, security, or governance change
+title: "[RFC]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to establish the problem and scope before opening an RFC pull request. Do not disclose an unremediated vulnerability here.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight
+      options:
+        - label: I reviewed ARCHITECTURE.md and the existing RFCs.
+          required: true
+        - label: This proposal affects a durable semantic, public contract, compatibility boundary, security claim, or governance rule.
+          required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: State the proposed change in a few paragraphs.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and evidence
+      description: Describe the concrete failure, limitation, use case, or incompatibility and the evidence that it matters.
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Current architecture
+      description: Identify the current objects, contracts, and invariants involved.
+    validations:
+      required: true
+
+  - type: textarea
+    id: design
+    attributes:
+      label: Proposed direction
+      description: Describe the intended object, state, contract, or interface changes without requiring a complete final specification.
+    validations:
+      required: true
+
+  - type: textarea
+    id: invariants
+    attributes:
+      label: Preserved or changed invariants
+      description: List the invariants preserved and any invariant that would intentionally change.
+    validations:
+      required: true
+
+  - type: textarea
+    id: security
+    attributes:
+      label: Authority, security, truth, and evidence
+      description: Explain likely effects on credentials, capabilities, Commit, verification, failure, recovery, privacy, or disclosure.
+
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility and migration
+      description: Identify likely schema, API, adapter, storage, or behavior changes.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and non-goals
+
+  - type: textarea
+    id: tests
+    attributes:
+      label: Conformance and acceptance approach
+      description: How could an independent implementation prove it behaves correctly?
