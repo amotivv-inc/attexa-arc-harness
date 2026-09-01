@@ -1,0 +1,39 @@
+{
+  "schema": "arc.public-import-provenance.v1",
+  "milestone": "0000-replace-me",
+  "recorded_at": "YYYY-MM-DDTHH:MM:SSZ",
+  "development_environment": {
+    "class": "ephemeral_virtual_machine",
+    "coordinator": "ChatGPT using Attexa Arc",
+    "local_git_commit": null
+  },
+  "sanitized_source": {
+    "archive_name": null,
+    "sha256": null,
+    "secret_scan": {
+      "tool": null,
+      "result": null
+    },
+    "dependency_review": {
+      "result": null,
+      "report_sha256": null
+    },
+    "license_review": {
+      "result": null,
+      "report_sha256": null
+    }
+  },
+  "testing": {
+    "development_test_report_sha256": null,
+    "separate_reproduction_report_sha256": null,
+    "public_reproduction_commands": []
+  },
+  "public_import": {
+    "repository": "amotivv-inc/attexa-arc-harness",
+    "commit": null,
+    "tag": null,
+    "differences_from_development_snapshot": [],
+    "known_omissions": [],
+    "known_limitations": []
+  }
+}

@@ -14,11 +14,15 @@ The model may change. The inner harness may change. The runtime may change. The 
 
 ## Project status
 
-> **Pre-alpha public development. Not production-ready.**
+> **Pre-alpha. Architecture public; implementation not yet publicly reproducible.**
 
-This repository is beginning with its architecture, governance, interoperability contracts, and public development process. An experimental Go reference implementation of `arcd` has completed early end-to-end prototype tests and is being prepared for a reproducible public import.
+This repository contains the project definition, architecture, governance, interoperability direction, and public development process.
 
-The current implementation should not yet be relied upon for production security, availability, disaster recovery, or unattended consequential actions. See [ROADMAP.md](ROADMAP.md) for the staged release plan and [SECURITY.md](SECURITY.md) for responsible disclosure.
+A working Go/SQLite implementation of `arcd` exists in a non-public development environment and has exercised the core Address-to-Commit lifecycle, real model-backed tool loops, per-Attempt authority, the Tool Gateway and MCP bridge, and concurrent Parent and Child Work. Core behavior has been separately reproduced within the project, but the runnable kernel source has not yet been imported here.
+
+Read [STATUS.md](STATUS.md) for the current evidence floor, [the first milestone record](docs/milestones/0001-core-kernel-prototype.md) for the scope already demonstrated, [ROADMAP.md](ROADMAP.md) for intended next work, and [SECURITY.md](SECURITY.md) for responsible disclosure.
+
+The current implementation should not yet be relied upon for production security, availability, disaster recovery, or unattended consequential actions.
 
 ## The problem
 
@@ -101,7 +105,7 @@ Attempt
   └── HarnessAdapter   which inner agent or human workflow runs there
 ```
 
-This allows combinations such as a local process with the reference worker, a container with Codex, or an Agent Fleet VM with OpenCode without changing Arc's durable Work model.
+This allows combinations such as a local process with the reference worker, a container with Codex, or an Attexa Arc execution environment with OpenCode without changing Arc's durable Work model.
 
 ## Architectural commitments
 
@@ -146,7 +150,14 @@ The project will use its own concepts to advance itself. Public development evid
 - Decision Requests and accepted architectural decisions;
 - release manifests and evidence bundles.
 
-It will not include private chain-of-thought, credentials, customer data, undisclosed vulnerabilities, or performative transcript dumps. See [docs/BUILDING-IN-PUBLIC.md](docs/BUILDING-IN-PUBLIC.md).
+It will not include private chain-of-thought, credentials, customer data, undisclosed vulnerabilities, or performative transcript dumps.
+
+See:
+
+- [Building Arc with Arc](docs/BUILDING-IN-PUBLIC.md)
+- [Public status and milestone process](docs/STATUS-UPDATES.md)
+- [Milestone records](docs/milestones/README.md)
+- [Public import provenance](docs/provenance/README.md)
 
 ## Planned repository shape
 

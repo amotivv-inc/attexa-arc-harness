@@ -190,8 +190,8 @@ Arc separates where execution runs from which inner loop runs there.
 Attempt
   |
   +-- RuntimeDriver
-  |     process, container, Agent Fleet VM, confidential runtime,
-  |     remote service, or another execution substrate
+  |     process, container, Attexa Arc execution environment,
+  |     confidential runtime, remote service, or another substrate
   |
   +-- HarnessAdapter
         reference worker, OpenCode, Codex, Claude Code,
@@ -202,7 +202,7 @@ A `RuntimeDriver` controls process or VM lifecycle, filesystem projection, netwo
 
 A `HarnessAdapter` renders native configuration, model endpoint settings, MCP or plugin registration, launch arguments, event normalization, steering, checkpoint semantics, and result extraction.
 
-The separation avoids pairwise implementations such as `OpenCodeOnFleetDriver`. Runtime and harness adapters are composed independently.
+The separation avoids pairwise implementations tied to one runtime and one harness. Runtime and harness adapters are composed independently.
 
 ## Human and deterministic performers
 
@@ -410,16 +410,18 @@ An implementation is Arc only if it preserves these invariants:
 
 ## Designed properties and implementation maturity
 
-| Property | Architectural meaning | Initial implementation status |
+Current evidence is tracked in [STATUS.md](STATUS.md). This table summarizes the architectural direction rather than replacing that evidence record.
+
+| Property | Architectural meaning | Current development maturity |
 |---|---|---|
 | Resumable | Work can continue through checkpoints and replacement Attempts | Partial |
 | Forkable | Address, Work, or Attempt can branch from immutable state and reconcile through Commit | Design foundation only |
-| Durable | Address, Canon, Work, events, artifacts, Outcomes, Candidates, and Commits survive workers | Demonstrated on one node |
-| Reusable | Active Work, accepted Outcomes, procedures, artifacts, checkpoints, and negative results prevent duplicate spend | Partially demonstrated |
+| Durable | Address, Canon, Work, events, artifacts, Outcomes, Candidates, and Commits survive workers | Demonstrated on one node and separately reproduced |
+| Reusable | Active Work, accepted Outcomes, procedures, artifacts, checkpoints, and negative results prevent duplicate spend | Equivalent-work reuse separately reproduced |
 | Token-managed | Situation compilation, lazy retrieval, artifacts, checkpoints, and Attempt rotation prevent context exhaustion | Partial |
-| Tool-loop capable | Inner harnesses can repeatedly invoke models and typed tools | Demonstrated in prototype |
+| Tool-loop capable | Inner harnesses can repeatedly invoke models and typed tools | Real model-backed loop separately reproduced |
 | Continuously executable | Work can run unattended under finite limits and continue through bounded Attempts | Bounded Attempt demonstrated |
-| Parallelizable | Parent Work governs isolated Child Work loops and reconciles results | In active prototype development |
+| Parallelizable | Parent Work governs isolated Child Work loops and reconciles results | Reference Parent/Child behavior separately reproduced; real OpenCode loops pending |
 
 ## Explicit non-claims
 
@@ -442,11 +444,11 @@ Agent Anything
   human collaboration and organizational surface
 
 Attexa Arc Harness
-  durable work identity, Situation, lifecycle, authority,
+  open-source durable work identity, Situation, lifecycle, authority,
   Outcomes, Commit, accretion, and evidence linkage
 
-Agent Fleet
-  isolated and persistent RuntimeDriver implementation
+Attexa Arc
+  managed private intelligence environment and execution integration
 
 Attexa Witness
   evidence and verification provider

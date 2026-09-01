@@ -4,6 +4,8 @@ Attexa Arc Harness should be one of its own earliest serious users.
 
 This is not a claim that the project can already build itself autonomously. It is a development discipline: as the kernel becomes capable, its own architecture, implementation, review, verification, releases, and accumulated knowledge should increasingly pass through the same durable Work model offered to other projects.
 
+Public status changes follow [the status and milestone process](STATUS-UPDATES.md). The repository is updated when the project's evidence state changes, not merely because development activity occurred.
+
 ## Why dogfood the harness
 
 Using Arc to build Arc helps answer questions that diagrams alone cannot:
@@ -83,30 +85,44 @@ Do not publish:
 - private infrastructure addresses or operational secrets;
 - copyrighted or licensed material without permission;
 - raw transcripts merely for spectacle;
-- claims of verification unsupported by a separate verifier and method.
+- claims of verification unsupported by a stated verifier and method.
 
 A concise structured Outcome with evidence is more valuable than a performative transcript dump.
 
-## Evidence classes
+## Evidence language
 
-Public artifacts should preserve the distinction among:
+Kernel truth classes and public project-status vocabulary serve related but distinct purposes.
+
+The kernel may represent:
 
 ```text
-worker-reported
-platform-observed
-self-tested
-independently verified
-externally reconciled
-operator-accepted
+reported
+platform_observed
+self_tested
+independently_verified
+externally_reconciled
+operator_accepted
 canonical
 ```
 
-For example:
+Public project updates use:
+
+```text
+development-tested
+separately reproduced
+publicly reproducible
+externally reviewed
+```
+
+Use **separately reproduced** when a distinct project-controlled verifier reruns the work. Reserve **independently verified** or **externally reviewed** for a verifier whose organizational and operational independence is stated.
+
+Examples:
 
 - “The builder says the feature is complete” is worker-reported.
 - “The process exited zero and produced these bytes” is platform-observed.
-- “The builder's own test suite passed” is self-tested.
-- “A separate verifier reran the suite from a clean checkout” may be independently verified.
+- “The builder's own test suite passed” is self-tested or development-tested.
+- “A separate Claude Sonnet verifier reran the suite through Attexa Arc” is separately reproduced.
+- “An outside security firm evaluated a stated scope” may be externally reviewed.
 - “A maintainer merged the result” is operator-accepted and, for the repository, canonical.
 
 These statements should not be collapsed into a single “passed” label.
@@ -210,7 +226,7 @@ The project should say:
 - what actually ran;
 - which model, harness, runtime, and tools were used when relevant;
 - which limits and authority applied;
-- which evidence was independently checked;
+- which evidence was separately reproduced or externally reviewed;
 - what failed or remained incomplete;
 - what became accepted project state.
 
