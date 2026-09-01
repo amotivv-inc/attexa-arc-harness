@@ -17,3 +17,14 @@ The project is pre-alpha. Until a first tagged release exists, entries remain un
 - Building-in-public policy for using Arc to build Arc.
 - GitHub issue and pull request templates.
 - Repository editor, attribute, and ignore configuration.
+- Canonical `STATUS.md` describing the current evidence floor.
+- Public status and milestone update process.
+- Milestone record `0001-core-kernel-prototype`.
+- Public import provenance guidance and manifest template.
+- Public technical preview readiness tracking issue.
+
+### Changed
+
+- Public runtime references now consistently use the product name **Attexa Arc** rather than internal execution-component naming.
+- Roadmap phase status now distinguishes availability from evidence and links to the canonical current status record.
+- Architecture maturity notes now reflect the separately reproduced core prototype and the still-pending real OpenCode integration.
