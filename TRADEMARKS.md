@@ -12,7 +12,6 @@ Marks covered by this policy include, without limitation:
 - Attexa Arc Harness;
 - Arc Harness Kernel;
 - Agent Anything;
-- Agent Fleet;
 - Attexa Witness;
 - ActionLease;
 - related logos, visual identities, and certification marks.
