@@ -1,21 +1,35 @@
 # Roadmap
 
-Attexa Arc Harness is in pre-alpha public development. This roadmap separates what has been demonstrated experimentally from what is available in this public repository and what is required before a stable release.
+Attexa Arc Harness is in pre-alpha public development. This roadmap describes intended future work and release gates. It is not the canonical statement of current implementation evidence.
+
+Read [STATUS.md](STATUS.md) for what is true today and [docs/STATUS-UPDATES.md](docs/STATUS-UPDATES.md) for the public status process.
 
 The roadmap is directional rather than contractual. Architecture-changing work should proceed through the [RFC process](rfcs/README.md).
 
 ## Status language
 
-- **Demonstrated**: exercised in an experimental reference implementation and independently rechecked at least once.
-- **Public**: source, tests, documentation, and reproducible setup are present in this repository.
-- **Stable**: versioned compatibility expectations and migration commitments exist.
-- **Production-ready**: supported operational controls, recovery, monitoring, and security review exist.
+Roadmap phases use descriptive status, while capability claims use the two-axis model in `STATUS.md`:
 
-A feature may be demonstrated without yet being public or production-ready.
+### Availability
+
+- `SPECIFIED`
+- `IMPLEMENTED_IN_DEVELOPMENT`
+- `PUBLICLY_AVAILABLE`
+- `RELEASED`
+
+### Evidence
+
+- `UNTESTED`
+- `DEVELOPMENT_TESTED`
+- `SEPARATELY_REPRODUCED`
+- `PUBLICLY_REPRODUCIBLE`
+- `EXTERNALLY_REVIEWED`
+
+A capability may be implemented and separately reproduced without yet being public or production-ready. “Separately reproduced” means a distinct project-controlled verifier reran the stated behavior; it does not imply a third-party audit.
 
 ## Phase 0: Public foundation
 
-**Status: in progress**
+**Status: foundation established; repository operations still maturing**
 
 - [x] Establish the public repository.
 - [x] Adopt Apache License 2.0.
@@ -23,14 +37,16 @@ A feature may be demonstrated without yet being public or production-ready.
 - [x] Publish governance, security, contribution, trademark, and conduct policies.
 - [x] Establish an RFC process.
 - [x] Define how Arc will be used to build Arc in public.
+- [x] Establish a public status and milestone process.
+- [x] Publish the first milestone record.
 - [ ] Configure repository labels, branch protection, private vulnerability reporting, and release permissions.
 - [ ] Publish the initial threat model.
 - [ ] Publish a compatibility and conformance vocabulary.
 
 ## Phase 1: Reproducible single-node kernel
 
-**Experimental implementation: demonstrated**  
-**Public repository: planned**
+**Development implementation:** core behavior separately reproduced  
+**Public repository:** planned
 
 Import and normalize the Go reference implementation behind a reproducible local setup.
 
@@ -64,8 +80,9 @@ Exit criteria:
 
 ## Phase 2: Canonical Tool Plane and first real harness adapter
 
-**Experimental Tool Gateway foundation: demonstrated**  
-**Public multi-harness reproduction: planned**
+**Development Tool Gateway foundation:** separately reproduced  
+**First real downstream harness:** not yet complete  
+**Public multi-harness reproduction:** planned
 
 Target scope:
 
@@ -96,7 +113,8 @@ Exit criteria:
 
 ## Phase 3: Parent and parallel Child Work
 
-**Status: active experimental development**
+**Reference Parent/Child behavior:** separately reproduced  
+**Real simultaneous OpenCode children:** not yet complete
 
 Target scope:
 
@@ -122,7 +140,7 @@ Exit criteria:
 
 ## Phase 4: Resumable long-horizon Work and context management
 
-**Status: planned**
+**Status: specified**
 
 Target scope:
 
@@ -148,7 +166,7 @@ Exit criteria:
 
 ## Phase 5: Forking, recurring work, and broader performers
 
-**Status: planned**
+**Status: specified**
 
 Target scope:
 
@@ -172,13 +190,13 @@ Exit criteria:
 
 ## Phase 6: Runtime and ecosystem portability
 
-**Status: planned**
+**Status: specified**
 
 Target scope:
 
-- Agent Fleet RuntimeDriver;
-- container RuntimeDriver;
-- second and third real HarnessAdapters, expected to include Codex and Claude Code when compatible;
+- Attexa Arc execution `RuntimeDriver` integration;
+- container `RuntimeDriver`;
+- second and third real `HarnessAdapter` implementations, expected to include Codex and Claude Code when compatible;
 - external tool and action providers;
 - provider capability and trust declarations;
 - Address import/export;
@@ -195,7 +213,7 @@ Exit criteria:
 
 ## Phase 7: Evidence and verified actions
 
-**Status: planned**
+**Status: specified**
 
 Target scope:
 
