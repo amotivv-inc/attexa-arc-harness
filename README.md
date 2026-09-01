@@ -4,7 +4,7 @@
 
 Attexa Arc Harness is an open-source framework for operating agentic work across models, runtimes, tools, people, and time.
 
-Its core, the **Arc Harness Kernel**, makes the work—not the agent session—the durable object:
+Its core, the **Arc Harness Kernel**, makes the work, not the agent session, the durable object:
 
 ```text
 Address → Situation → Commission → Work → Attempt → Outcome → Commit → Accretion
@@ -53,7 +53,7 @@ A model context window is temporary. A chat is temporary. A process, container, 
 | **Accretion** | Scoped, provenance-aware knowledge that makes later work better or cheaper |
 
 ```text
-                        ATTEXTA ARC HARNESS
+                         ATTEXA ARC HARNESS
 
 Principal
     |
@@ -156,7 +156,7 @@ kernel/          durable state machines and control logic
 contracts/       versioned schemas and interoperability contracts
 runtime/         RuntimeDriver implementations
 harness/         HarnessAdapter implementations
-Tool Plane/      capability-aware tool gateway and frontends
+toolplane/       capability-aware tool gateway and frontends
 inference/       model-provider gateway and adapters
 evidence/        truth classes, receipts, and verifier interfaces
 conformance/     portable adapter and kernel tests
