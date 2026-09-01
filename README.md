@@ -14,15 +14,15 @@ The model may change. The inner harness may change. The runtime may change. The 
 
 ## Project status
 
-> **Pre-alpha. Architecture public; implementation not yet publicly reproducible.**
+> **Pre-alpha / technical-preview preparation; not production-ready.**
 
-This repository contains the project definition, architecture, governance, interoperability direction, and public development process.
+This repository contains the project definition, architecture, governance, interoperability direction, and public development process, all of which are available and under active development.
 
-A working Go/SQLite implementation of `arcd` exists in a non-public development environment and has exercised the core Address-to-Commit lifecycle, real model-backed tool loops, per-Attempt authority, the Tool Gateway and MCP bridge, and concurrent Parent and Child Work. Core behavior has been separately reproduced within the project, but the runnable kernel source has not yet been imported here.
+A separate, private, single-node Go/SQLite Arc Harness Kernel reference prototype has crossed the design-only boundary and has been separately reproduced within the project. It has exercised the core Address-to-Commit lifecycle, real model-backed tool loops, per-Attempt authority, the Tool Gateway and MCP bridge, the `RuntimeDriver` / `HarnessAdapter` separation, and concurrent Parent and Child Work, including a real OpenCode 1.18.25 Builder/Reviewer run. The runnable kernel source has not yet been imported here, and none of this makes the implementation reproducible from this repository, production-ready, or ready for unattended consequential actions.
 
-Read [STATUS.md](STATUS.md) for the current evidence floor, [the first milestone record](docs/milestones/0001-core-kernel-prototype.md) for the scope already demonstrated, [ROADMAP.md](ROADMAP.md) for intended next work, and [SECURITY.md](SECURITY.md) for responsible disclosure.
+Read [STATUS.md](STATUS.md) for the current evidence floor, [the milestone records](docs/milestones/README.md) for the scope already demonstrated, [ROADMAP.md](ROADMAP.md) for intended next work, and [SECURITY.md](SECURITY.md) for responsible disclosure.
 
-The current implementation should not yet be relied upon for production security, availability, disaster recovery, or unattended consequential actions.
+The current implementation should not yet be relied upon for production security, availability, disaster recovery, external audit or certification, or unattended consequential actions.
 
 ## The problem
 
