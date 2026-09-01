@@ -4,11 +4,11 @@ _Last materially updated: September 1, 2026_
 
 ## Current state
 
-**Pre-alpha. Architecture public; implementation not yet publicly reproducible.**
+**Pre-alpha / technical-preview preparation; not production-ready.**
 
-The Attexa Arc Harness architecture, governance, interoperability direction, and public development process are available in this repository.
+The Attexa Arc Harness architecture, governance, interoperability direction, and public development process are available in this repository and under active development.
 
-A working Go/SQLite implementation of the Arc Harness Kernel currently exists in a non-public local Git repository on an ephemeral DigitalOcean development VM. ChatGPT is directing development through **Attexa Arc**, which coordinates implementation and separate reproduction work against that environment. The runnable kernel source has not yet been imported into this public repository.
+A separate, private, single-node Go/SQLite Arc Harness Kernel reference prototype has crossed the design-only boundary: it runs, and its core behavior has been separately reproduced within the project. The prototype currently exists in a non-public local Git repository on an ephemeral DigitalOcean development VM. ChatGPT is directing development through **Attexa Arc**, which coordinates implementation and separate reproduction work against that environment. The runnable kernel source has not yet been imported into this public repository.
 
 The following core behavior has been exercised and separately reproduced within the project:
 
@@ -17,18 +17,22 @@ The following core behavior has been exercised and separately reproduced within 
 - real OpenRouter-backed agent tool-use loops;
 - per-Attempt inference and tool authority;
 - the canonical Tool Gateway and MCP bridge;
-- the runtime-neutral `HarnessAdapter` contract;
+- the runtime-neutral `RuntimeDriver` / `HarnessAdapter` separation;
 - concurrent Parent and Child Work with distinct Builder and Reviewer capabilities;
-- independent child artifacts, events, and Outcomes;
+- a real OpenCode 1.18.25 `HarnessAdapter` running Builder and Reviewer child processes under Arc-mediated inference authority, Arc-mediated tool authority, and operating-system isolation;
+- separate child artifacts, events, and Outcomes;
 - parent reconciliation and compare-and-set Commit;
 - equivalent-work reuse and stale-generation conflict handling;
-- persistence across service restart.
+- persistence across service restart;
+- explicit cancellation cascade and cancelled-parent terminal-state integrity.
 
-The latest local development snapshot, `e9985e397822609f3bde34f4b5fa4dae1c42ce56`, reportedly corrects two cancellation defects by making cascade behavior explicit and preventing a cancelled parent from later being rewritten as successful. Those corrections passed development tests and live scenarios. A separate Claude Sonnet reproduction is still in progress, so the cancellation corrections remain **development-tested**, not yet **separately reproduced**.
+A fresh, separate project-controlled rerun reproduced the full scope above from a clean state. It reported all twelve internal verification groups as passing under fresh test, race, and conformance checks: Address and Canon durability; the Commission-to-Commit lifecycle; the Tool Gateway; the MCP bridge; model-backed loops; the `RuntimeDriver` / `HarnessAdapter` separation; concurrent Parent and Child Work; the OpenCode Builder/Reviewer run; reconciliation; compare-and-set Commit; reuse and stale-conflict handling; and restart persistence with cancellation semantics.
 
-The first real OpenCode `HarnessAdapter` and a run with two simultaneous sandboxed OpenCode child loops have not yet been completed.
+As internal prototype evidence rather than a benchmark claim, the original simultaneous OpenCode Builder/Reviewer run measured **43.630 seconds** of wall-clock overlap between the two child processes; the fresh separate rerun measured **34.881 seconds** of overlap. Both observations are single-node, single-run timings from a private development environment. They support the claim that two real child harness processes genuinely overlapped in execution; they are not a performance benchmark and say nothing about production throughput, latency, or scale.
 
-No claim of production readiness, high availability, disaster recovery, external security review, or stable public interfaces is being made.
+This milestone does **not** mean that the implementation source is already public, that it is reproducible from this repository, that it is production-ready, highly available, or disaster-recoverable, that it has been externally audited or certified, or that it is ready for unattended consequential actions. No claim of production readiness, high availability, disaster recovery, external security review, or stable public interfaces is being made.
+
+The next public gate is to import and sanitize the reference implementation, make it reproducible from the public repository, publish conformance fixtures and evidence, and obtain reproduction from public source.
 
 ## How to read this page
 
@@ -66,17 +70,17 @@ See [docs/STATUS-UPDATES.md](docs/STATUS-UPDATES.md) for the complete update pro
 | Per-Attempt tool authority | `IMPLEMENTED_IN_DEVELOPMENT` | `SEPARATELY_REPRODUCED` | No |
 | Canonical Tool Gateway | `IMPLEMENTED_IN_DEVELOPMENT` | `SEPARATELY_REPRODUCED` | No |
 | MCP bridge | `IMPLEMENTED_IN_DEVELOPMENT` | `SEPARATELY_REPRODUCED` | No |
-| Runtime-neutral `HarnessAdapter` contract | `IMPLEMENTED_IN_DEVELOPMENT` | `SEPARATELY_REPRODUCED` | Architecture only |
+| Runtime-neutral `RuntimeDriver` / `HarnessAdapter` separation | `IMPLEMENTED_IN_DEVELOPMENT` | `SEPARATELY_REPRODUCED` | Architecture only |
 | Concurrent Parent and Child Work | `IMPLEMENTED_IN_DEVELOPMENT` | `SEPARATELY_REPRODUCED` | No |
 | Builder and Reviewer capability separation | `IMPLEMENTED_IN_DEVELOPMENT` | `SEPARATELY_REPRODUCED` | No |
+| Real OpenCode 1.18.25 `HarnessAdapter` | `IMPLEMENTED_IN_DEVELOPMENT` | `SEPARATELY_REPRODUCED` | No |
+| Two simultaneous sandboxed OpenCode Builder/Reviewer child loops | `IMPLEMENTED_IN_DEVELOPMENT` | `SEPARATELY_REPRODUCED` | No |
 | Parent reconciliation and CAS Commit | `IMPLEMENTED_IN_DEVELOPMENT` | `SEPARATELY_REPRODUCED` | No |
 | Equivalent-work reuse | `IMPLEMENTED_IN_DEVELOPMENT` | `SEPARATELY_REPRODUCED` | No |
 | Stale-generation conflict | `IMPLEMENTED_IN_DEVELOPMENT` | `SEPARATELY_REPRODUCED` | No |
 | Service-restart persistence | `IMPLEMENTED_IN_DEVELOPMENT` | `SEPARATELY_REPRODUCED` | No |
-| Explicit cancellation cascade | `IMPLEMENTED_IN_DEVELOPMENT` | `DEVELOPMENT_TESTED` | No |
-| Cancelled-parent terminal-state integrity | `IMPLEMENTED_IN_DEVELOPMENT` | `DEVELOPMENT_TESTED` | No |
-| Real OpenCode `HarnessAdapter` | `SPECIFIED` | `UNTESTED` | No |
-| Two simultaneous sandboxed OpenCode child loops | `SPECIFIED` | `UNTESTED` | No |
+| Explicit cancellation cascade | `IMPLEMENTED_IN_DEVELOPMENT` | `SEPARATELY_REPRODUCED` | No |
+| Cancelled-parent terminal-state integrity | `IMPLEMENTED_IN_DEVELOPMENT` | `SEPARATELY_REPRODUCED` | No |
 | Automatic Attempt rotation before context exhaustion | `SPECIFIED` | `UNTESTED` | No |
 | Public technical preview | `SPECIFIED` | `UNTESTED` | No |
 | Production resilience | Not claimed | Not evaluated | No |
@@ -114,18 +118,19 @@ Local development commit identifiers are provenance references only. They are no
 
 ## Milestones
 
-- [Milestone 0001: Core Kernel Prototype](docs/milestones/0001-core-kernel-prototype.md) — reached in a non-public development environment; core behavior separately reproduced; latest cancellation amendment still under separate reproduction.
-- **Next:** first real OpenCode adapter and two simultaneous sandboxed OpenCode child loops.
+- [Milestone 0001: Core Kernel Prototype](docs/milestones/0001-core-kernel-prototype.md) — reached in a non-public development environment; core behavior separately reproduced.
+- [Milestone 0002: Real OpenCode Adapter and Concurrent Builder/Reviewer Run](docs/milestones/0002-real-opencode-adapter-and-concurrent-run.md) — reached in the same non-public development environment; a real OpenCode 1.18.25 `HarnessAdapter` ran simultaneous sandboxed Builder and Reviewer child loops, and the full scope was separately reproduced in a fresh project-controlled rerun across all internal verification groups.
+- **Next:** import and sanitize the reference implementation, make it reproducible from the public repository, publish conformance fixtures and evidence, and obtain reproduction from public source.
 - **Then:** sanitized, evidence-bearing public technical preview.
 
 ## Next public truth-state change
 
 The next update to this file should occur when one of these happens:
 
-1. the latest cancellation corrections are separately reproduced;
-2. the real OpenCode adapter and concurrent OpenCode run reach a stated evidence level;
-3. a material limitation or defect changes the current evidence floor;
-4. sanitized source becomes publicly reproducible;
+1. the sanitized reference implementation becomes reproducible from the public repository;
+2. published conformance fixtures and evidence become available;
+3. an outsider reproduces the implementation from public source;
+4. a material limitation or defect changes the current evidence floor;
 5. a tagged release or compatibility promise is made.
 
 Routine local commits, mission starts, elapsed time, model spend, and ordinary implementation activity are intentionally not published as project-status changes.
