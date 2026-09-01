@@ -54,6 +54,24 @@ Public Arc Harness Address
 
 Git remains the source-control system. GitHub remains the public collaboration surface. Arc supplies the durable Work, context, authority, truth, and evidence relationships around them.
 
+## The repository as the first Arc Practice pilot
+
+This repository is also the first intended test of [Arc Practice](practice/README.md).
+
+A fresh person or agent with no access to the private development conversations should be able to enter the repository and determine:
+
+- what the project exists to do;
+- which architecture and processes are currently accepted;
+- what has been implemented, separately reproduced, or only specified;
+- what remains unavailable or unproven;
+- which public claims may be advanced;
+- when an RFC, milestone, provenance record, or status update is required;
+- what the next valid piece of Work is.
+
+The test should use the [Continuity Handoff Test](practice/CONTINUITY-HANDOFF-TEST.md). Missing or ambiguous instructions discovered by the participant are defects in the public workplace and should become explicit Work.
+
+The project should not record this pilot as a passed milestone until a genuinely fresh participant has completed the test and the evidence has been accepted.
+
 ## What to publish
 
 Public development may publish structured records such as:
@@ -186,7 +204,7 @@ No release should claim more assurance than its evidence supports.
 
 ### Stage 1: Documentation and issues
 
-Use Arc concepts to structure architecture, RFCs, problems, acceptance criteria, and decisions while execution remains mostly manual.
+Use Arc concepts to structure architecture, RFCs, problems, acceptance criteria, and decisions while execution remains mostly manual. Run the first Continuity Handoff Test against the repository.
 
 ### Stage 2: Bounded implementation Work
 

@@ -139,6 +139,23 @@ Arc is not presented as:
 
 The open project is intended to contain the real single-node kernel semantics, local runtime, contracts, adapters, and conformance tests. Managed Attexa Arc is the supported workplace, infrastructure, integration, governance, and trust-service product built around it.
 
+## Arc Practice
+
+A durable workplace does not become coherent merely because its files persist. **Arc Practice** is the open discipline of establishing and stewarding a body of work so its purpose, accepted state, evidence, authority, unresolved uncertainty, and ability to continue survive changes in people, agents, vendors, and tools.
+
+An **Arc Practitioner** helps bring this method to a real body of work. Their success is measured not by how much process they create, but by whether another qualified person or agent can enter the workplace, understand its current Situation, and continue useful Work without depending on the practitioner's private memory.
+
+An **Arc Steward** maintains an established workplace over time.
+
+No Attexa Certified Arc Practitioner program is currently offered. Any future credential should require an end-to-end assessed practicum and a successful continuity handoff, not merely course completion or familiarity with Arc terminology.
+
+See:
+
+- [Arc Practice](docs/practice/README.md)
+- [Arc Practitioner Charter](docs/practice/ARC-PRACTITIONER-CHARTER.md)
+- [Continuity Handoff Test](docs/practice/CONTINUITY-HANDOFF-TEST.md)
+- [The Work Should Remain thesis series](docs/thesis/README.md)
+
 ## Building Arc with Arc
 
 The project will use its own concepts to advance itself. Public development evidence may include:
