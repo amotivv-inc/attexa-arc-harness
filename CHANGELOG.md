@@ -27,6 +27,7 @@ The project is pre-alpha. Until a first tagged release exists, entries remain un
 - Continuity Handoff Test.
 - Public thesis-series lineage for **The Work Should Remain**.
 - First Arc Practice pilot tracking issue.
+- Project Origin and Stewardship brief connecting the Arc thesis to amotivv's organizational, technical, operational, and consultative experience.
 
 ### Changed
 
