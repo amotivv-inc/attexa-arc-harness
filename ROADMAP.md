@@ -45,7 +45,7 @@ A capability may be implemented and separately reproduced without yet being publ
 
 ## Phase 1: Reproducible single-node kernel
 
-**Development implementation:** core behavior separately reproduced  
+**Development implementation:** design-only boundary crossed; core behavior separately reproduced in a private prototype  
 **Public repository:** planned
 
 Import and normalize the Go reference implementation behind a reproducible local setup.
@@ -81,7 +81,7 @@ Exit criteria:
 ## Phase 2: Canonical Tool Plane and first real harness adapter
 
 **Development Tool Gateway foundation:** separately reproduced  
-**First real downstream harness:** not yet complete  
+**First real downstream harness:** a real OpenCode 1.18.25 `HarnessAdapter` has run Builder and Reviewer child processes in the private prototype under Arc-mediated inference and tool authority with operating-system isolation; not yet publicly reproducible  
 **Public multi-harness reproduction:** planned
 
 Target scope:
@@ -114,7 +114,7 @@ Exit criteria:
 ## Phase 3: Parent and parallel Child Work
 
 **Reference Parent/Child behavior:** separately reproduced  
-**Real simultaneous OpenCode children:** not yet complete
+**Real simultaneous OpenCode children:** demonstrated in the private prototype with measured wall-clock overlap and separately reproduced in a fresh project-controlled rerun; not yet publicly reproducible
 
 Target scope:
 
