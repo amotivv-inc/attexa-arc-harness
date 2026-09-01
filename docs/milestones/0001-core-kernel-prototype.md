@@ -126,4 +126,4 @@ After that, the project will prepare a sanitized public source import and eviden
 
 ## Amendments
 
-No amendments at initial publication.
+**September 1, 2026:** The cancellation corrections described above under “Cancellation amendment in progress” have since been separately reproduced, and the next gate described above has been reached. See [Milestone 0002: Real OpenCode Adapter and Concurrent Builder/Reviewer Run](0002-real-opencode-adapter-and-concurrent-run.md) and the current [STATUS.md](../../STATUS.md) for the updated evidence floor. The scope and findings recorded above for Milestone 0001 at the time of initial publication are otherwise unchanged.

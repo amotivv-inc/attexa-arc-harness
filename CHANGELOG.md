@@ -33,7 +33,8 @@ The project is pre-alpha. Until a first tagged release exists, entries remain un
 
 - Public runtime references now consistently use the product name **Attexa Arc** rather than internal execution-component naming.
 - Roadmap phase status now distinguishes availability from evidence and links to the canonical current status record.
-- Architecture maturity notes now reflect the separately reproduced core prototype and the still-pending real OpenCode integration.
+- `STATUS.md`, `README.md`, `ROADMAP.md`, and `ARCHITECTURE.md` now reflect that the private single-node reference prototype has crossed the design-only boundary, including a real OpenCode 1.18.25 Builder/Reviewer run and a fresh separate project-controlled reproduction across all internal verification groups. This is recorded as internal prototype evidence, not a public reproducibility or production-readiness claim.
+- Added milestone record `0002-real-opencode-adapter-and-concurrent-run` documenting the private prototype's OpenCode adapter, concurrent Builder/Reviewer overlap measurements, and fresh separate reproduction.
 
 ### Clarified
 

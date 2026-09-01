@@ -421,7 +421,7 @@ Current evidence is tracked in [STATUS.md](STATUS.md). This table summarizes the
 | Token-managed | Situation compilation, lazy retrieval, artifacts, checkpoints, and Attempt rotation prevent context exhaustion | Partial |
 | Tool-loop capable | Inner harnesses can repeatedly invoke models and typed tools | Real model-backed loop separately reproduced |
 | Continuously executable | Work can run unattended under finite limits and continue through bounded Attempts | Bounded Attempt demonstrated |
-| Parallelizable | Parent Work governs isolated Child Work loops and reconciles results | Reference Parent/Child behavior separately reproduced; real OpenCode loops pending |
+| Parallelizable | Parent Work governs isolated Child Work loops and reconciles results | Reference Parent/Child behavior separately reproduced; a real OpenCode 1.18.25 Builder/Reviewer run with measured overlapping execution has been demonstrated and separately reproduced in the private prototype, not yet publicly reproducible |
 
 ## Explicit non-claims
 

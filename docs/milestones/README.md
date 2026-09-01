@@ -9,10 +9,10 @@ They are not a development diary, release calendar, or replacement for [STATUS.m
 | ID | Milestone | Availability | Evidence | Public source |
 |---|---|---|---|---|
 | [0001](0001-core-kernel-prototype.md) | Core Kernel Prototype | `IMPLEMENTED_IN_DEVELOPMENT` | `SEPARATELY_REPRODUCED` for the stated core scope | No |
+| [0002](0002-real-opencode-adapter-and-concurrent-run.md) | Real OpenCode Adapter and Concurrent Builder/Reviewer Run | `IMPLEMENTED_IN_DEVELOPMENT` | `SEPARATELY_REPRODUCED`, including a fresh separate project-controlled rerun | No |
 
 ## Planned gates
 
-- **0002 — First real downstream harness:** a real OpenCode `HarnessAdapter` and two simultaneous sandboxed child loops.
 - **0003 — Public technical preview:** sanitized source, tests, evidence, and setup reproducible from a fresh public checkout.
 
 ## Record rules
