@@ -128,6 +128,12 @@ The governing success condition is:
 
 > **An Arc Practitioner succeeds when the body of work becomes less dependent on the practitioner’s private knowledge.**
 
+Arc Practice also follows an **Independent Value Principle**:
+
+> **Arc Practice must leave the body of work materially better whether or not the organization subsequently purchases, continues, or expands any amotivv product or service. Successful practice is measured by durable improvement to the work, not vendor conversion.**
+
+This separates the integrity of the practice from amotivv's commercial interest. An Arc engagement may lead to a managed Attexa Arc or Agent Anything deployment, another Commission, or another commercial relationship, but those outcomes do not define whether the practice succeeded. An organization that does not continue with amotivv should still retain useful improvements in its accepted state, evidence, authority boundaries, operating understanding, continuity, or ability to proceed with another qualified participant.
+
 This is also why any future Attexa Certified Arc Practitioner credential must be grounded in an end-to-end practicum rather than course completion or familiarity with terminology. The work itself must demonstrate that another qualified participant can enter, orient, and continue without relying on an undocumented briefing from the person who established the environment.
 
 No such certification program is currently offered.
@@ -162,6 +168,8 @@ Attexa Arc Harness is licensed under Apache License 2.0. Arc Practice is being d
 amotivv’s stewardship does not mean that the project is complete, beyond challenge, or applicable in the same form to every domain. Stewardship means maintaining the project’s coherence while its architecture and practice are tested against real bodies of work.
 
 The experience behind the project explains why we began. It does not substitute for evidence that the method works.
+
+The Independent Value Principle also constrains stewardship: amotivv may develop, support, and commercialize products around Arc while preserving a practice whose success does not require continued dependency on amotivv. The organization adopting the practice should remain able to retain and continue the durable improvement established through the engagement.
 
 ## How we intend to test the claim
 
