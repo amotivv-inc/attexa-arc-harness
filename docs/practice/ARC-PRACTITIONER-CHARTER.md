@@ -144,6 +144,12 @@ The workplace should be understandable to qualified humans and machine performer
 
 Every accepted state must be capable of correction, supersession, retraction, or expiration through an explicit process.
 
+### 11. Independent value
+
+Arc Practice must leave the body of work materially better whether or not the organization subsequently purchases, continues, or expands any amotivv product or service. Successful practice is measured by durable improvement to the work, not vendor conversion.
+
+A practitioner may identify a managed Attexa Arc or Agent Anything deployment as an appropriate continuation path, but conversion is a commercial outcome, not the success condition of the engagement. A non-converting engagement can still be successful Arc Practice when it leaves the organization with a more legible, governable, continuable body of work.
+
 ## Ethical commitments
 
 An Arc Practitioner should:
@@ -157,7 +163,8 @@ An Arc Practitioner should:
 - avoid overstating security, verification, or completeness;
 - preserve meaningful dissent and uncertainty;
 - make handoff assessment fair and role-appropriate;
-- leave organizations capable of continuing without proprietary practitioner knowledge.
+- leave organizations capable of continuing without proprietary practitioner knowledge;
+- preserve the independent value of the engagement rather than treating product conversion as proof of practice success.
 
 ## Evidence of competent practice
 
@@ -187,6 +194,8 @@ Possessing templates is not evidence of competent practice. The resulting workpl
 > **An Arc Practitioner succeeds when the body of work becomes less dependent on the practitioner's private knowledge.**
 
 A practitioner who remains the only person capable of explaining or operating the environment has created a new dependency rather than durable continuity.
+
+Independent value is part of that success condition. The organization should retain meaningful improvement in the body of work even when it does not adopt a particular amotivv product or continue a commercial relationship with the practitioner.
 
 ## Certification boundary
 
