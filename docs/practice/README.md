@@ -73,6 +73,16 @@ Test continuity through handoff
 Transfer and maintain stewardship
 ```
 
+## Practice invariant: Independent Value
+
+> **Arc Practice must leave the body of work materially better whether or not the organization subsequently purchases, continues, or expands any amotivv product or service. Successful practice is measured by durable improvement to the work, not vendor conversion.**
+
+An Arc engagement may legitimately lead to a managed Attexa Arc or Agent Anything deployment, another Arc Commission, or another commercial relationship. Those are commercial outcomes rather than the definition of practice success.
+
+A non-converting engagement can still be successful when the organization leaves with a more legible, governable, continuable body of work and durable artifacts, evidence, authority boundaries, accepted state, or operating understanding that remain useful without a subsequent amotivv purchase.
+
+This separation matters because Arc Practice is intended to serve the body of work rather than manufacture dependency on the practitioner or on a particular platform.
+
 ### 1. Bound the body of work
 
 Identify the enduring thing whose continuity matters: a platform, product, operating capability, research program, regulated process, transition, client matter, or another coherent body of work.
